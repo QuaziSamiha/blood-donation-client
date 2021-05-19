@@ -4,6 +4,9 @@ import './index.css';
 import App from './App';
 import reportWebVitals from './reportWebVitals';
 
+import 'bootstrap/dist/css/bootstrap.css';
+import { getNodeText } from '@testing-library/dom';
+
 ReactDOM.render(
   <React.StrictMode>
     <App />
