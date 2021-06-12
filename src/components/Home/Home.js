@@ -9,7 +9,7 @@ import Footer from '../Footer/Footer';
 
 const Home = () => {
     return (
-        <div>
+        <div className='all-component pt-0'>
             <div id="carouselExampleCaptions" className="carousel slide blood-banner" data-bs-ride="carousel">
                 <div className="carousel-indicators">
                     <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="0" className="active" aria-current="true" aria-label="Slide 1"></button>

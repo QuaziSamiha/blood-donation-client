@@ -6,7 +6,7 @@ import Logo from '../../images/blood-icon.png';
 const Header = () => {
     return (
         <div>
-            <nav className='navbar navbar-expand-md navbar-light bg-dark'>
+            <nav className='navbar navbar-expand-md navbar-light bg-dark fixed-top'>
                 <div className="container">
                     <h3 className='navbar-brand logo text-danger'>DONATETHEBLOOD
                         <img className='navbar-brand logo blood-drop-logo' src={Logo} alt="" />
