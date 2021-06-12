@@ -1,7 +1,13 @@
-.logo{
-    /* margin-right: 45% */
+.blood-drop-logo{
+    height: 50px;
 }
 
-#navbarNav{
-    /* margin-left: 45% */
+.all-links:hover {
+    background-color: grey;
+    box-shadow: rgb(126, 87, 87) 1px 1px 10px;
+    border-radius: 4px;
+}
+
+.all-btn:hover {
+    box-shadow: grey 3px 3px 10px;
 }
