@@ -6,7 +6,7 @@ import Logo from '../../images/blood-icon.png';
 const Header = () => {
     return (
         <div>
-            <nav className='navbar navbar-expand-md navbar-light bg-dark'>
+            <nav className='navbar navbar-expand-md navbar-light bg-dark fixed-top'>
                 <div className="container">
                     <h3 className='navbar-brand logo text-danger'>DONATETHEBLOOD
                         <img className='navbar-brand logo blood-drop-logo' src={Logo} alt="" />
@@ -35,22 +35,3 @@ export default Header;
 //  className='fixed-top'
 
 
-        //     {/* <nav className='navbar navbar-expand-md navbar-light'>
-        //         <div className='container'>
-        //             {/* <div className='logo'> */}
-        //             <a className='navbar-brand'><b>DONATETHEBLOOD</b></a>
-        //             <button className='navbar-toggler' type='button' data-bs-toggle='collapse' data-bs-target='#navbarNav'>
-        //                 <span className='navbar-toggler-icon'></span>
-        //             </button>
-        //         </div>
-        //         <div className='collapse navbar-collapse ml-auto' id='navbarNav'>
-        //             <div className='navbar-nav'>
-        //                 <a className='nav-link' href="home">Home</a>
-        //                 <a className='nav-link' href="donors">Donors</a>
-        //                 <a className='nav-link' href="sign-in">Sign in</a>
-        //                 <a className='nav-link' href="search">Search</a>
-        //                 <a className='nav-link' href="about-us">About us</a>
-        //             </div>
-        //         </div>
-        //     </div>
-        // </nav> */}

@@ -1,0 +1,24 @@
+/* .all-component {
+    background-color: #282c34;
+    min-height: 100vh;
+    font-size: calc(10px + 2vmin);
+    color: white;
+} */
+
+.life-saver{
+    border: maroon solid 1px;
+    border-radius: 30px;
+    /* box-shadow: maroon 4px 5px 10px; */
+    padding: 10px 55px;
+    color: maroon;
+    font-size: larger;
+    font-weight: bold;
+    margin: 30px;
+}
+
+.life-saver:hover{
+    width: 350px;
+    background-color: maroon;
+    color: whitesmoke;
+    box-shadow: rgb(51, 9, 9) 7px 7px 15px;
+}

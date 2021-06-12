@@ -1,0 +1,11 @@
+.all-component {
+    padding-top: 100px;
+    background-color: #282c34;
+    min-height: 70vh;
+    font-size: calc(10px + 2vmin);
+    color: white;
+}
+
+.all-btn:hover {
+    box-shadow: grey 3px 3px 10px;
+}
