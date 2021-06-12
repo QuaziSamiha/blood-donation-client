@@ -1,0 +1,31 @@
+.all-component {
+    background-color: #282c34;
+    min-height: 100vh;
+    font-size: calc(10px + 2vmin);
+    color: white;
+}
+
+.google-btn {
+    width: 100%;
+    border-radius: 20px;
+    margin-bottom: 28px;
+}
+
+img{
+   width: 40px;
+   height: 40px; 
+}
+
+.sign-in-form {
+    margin: 0 20%;
+}
+
+p {
+    color: rgb(128, 123, 123);
+    font-size: 12px;
+}
+
+.login-form {
+    border-radius: 10px;
+    box-shadow: lightslategrey 5px 5px 10px;
+}
