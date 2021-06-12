@@ -1,0 +1,8 @@
+.app {
+    padding: 0;
+    margin: 0;
+    background-color: #282c34;
+    min-height: 100vh;
+    font-size: calc(10px + 2vmin);
+    color: white;
+}
