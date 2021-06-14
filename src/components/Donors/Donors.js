@@ -1,10 +1,9 @@
 import React from 'react';
-import Header from './Donors';
+import './Donors.css';
 
 const Donors = () => {
     return (
-        <div>
-            {/* <Header /> */}
+        <div className='all-component'>
             <h1>this is donors</h1>
         </div>
     );

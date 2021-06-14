@@ -1,11 +1,9 @@
 import React from 'react';
-import Header from './Search';
+import './Search.css';
 
 const Search = () => {
     return (
-        <div>
-            {/* <Header /> */}
-
+        <div className='all-component'>
             <h2>this is search</h2>
         </div>
     );

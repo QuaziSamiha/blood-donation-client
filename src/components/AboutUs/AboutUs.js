@@ -1,12 +1,10 @@
 import React from 'react';
-import Header from './AboutUs';
+import './About.css';
 
 const AboutUs = () => {
     return (
-        <div>
-            {/* <Header /> */}
-
-           <h1>this is about us</h1> 
+        <div className='all-component'>
+            <h1>this is about us</h1>
         </div>
     );
 };

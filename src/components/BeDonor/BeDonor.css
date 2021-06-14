@@ -1,0 +1,28 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+.all-component {
+    background-color: #282c34;
+    min-height: 100vh;
+    font-size: calc(10px + 2vmin);
+    color: white;
+}
+
+.donor-form {
+    padding-top: 100px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    /* display: grid;
+    place-items: center; */
+}
+
+.donor-form2{
+    border: slategrey solid 1px;
+    border-radius: 10px;
+    box-shadow: slategrey 2px 2px 10px;
+}
+

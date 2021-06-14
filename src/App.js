@@ -11,6 +11,7 @@ import Search from './components/Search/Search';
 import AboutUs from './components/AboutUs/AboutUs';
 import PageNotFound from './components/PageNotFound/PageNotFound';
 import Header from './components/Header/Header';
+import BeDonor from './components/BeDonor/BeDonor';
 
 function App() {
   return (
@@ -32,6 +33,9 @@ function App() {
           </Route>
           <Route path='/about-us'>
             <AboutUs />
+          </Route>
+          <Route path='/registration'>
+            <BeDonor/>
           </Route>
           <Route exact path='/'>
             <Home />
