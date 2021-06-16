@@ -53,6 +53,7 @@ const BeDonor = () => {
 
     return (
         <div className='all-component text-light'>
+            <h4 className='text-center pt-5 mt-5 text-success'>Enter Your Detail Information to Be A Donor</h4>
             <div className='donor-form'>
                 <div className='bg-dark m-3 p-5 col-sm-10 col-md-8 col-lg-6 donor-form2'>
                     <form onSubmit={handleSubmit(onSubmit)}>
@@ -60,7 +61,20 @@ const BeDonor = () => {
                         <input type="text" name="name" placeholder='Enter Your Name' {...register("name")} required className='form-control bg-dark text-light' /> <br />
                         <input type="text" name="age" placeholder='Your Age' {...register("age")} required className='form-control bg-dark text-light' /> <br />
                         <input type="text" name="gender" placeholder='Your Gender' {...register("gender")} required className='form-control bg-dark text-light' /> <br />
-                        <input type="text" name="bloodGrp" placeholder='Your Blood Group' {...register("bloodGrp")} required className='form-control bg-dark text-light' /> <br />
+                        {/* <input type="text" name="bloodGrp" placeholder='Your Blood Group' {...register("bloodGrp")} required className='form-control bg-dark text-light' /> <br /> */}
+                        <div className='col-md-4 col-lg-4'>
+                            <select name="bloodGrp"  {...register("bloodGrp")} className="form-control bg-dark text-light">
+                                <option defaultValue>select blood group</option>
+                                <option value="A negative">A-</option>
+                                <option value="A positive">A+</option>
+                                <option value="B negative">B-</option>
+                                <option value="B positive">B+</option>
+                                <option value="AB negative">AB-</option>
+                                <option value="AB positive">AB+</option>
+                                <option value="O negative">O-</option>
+                                <option value="O positive">O+</option>
+                            </select> <br />
+                        </div>
                         <input type="text" name="city" placeholder='Your City' {...register("city")} required className='form-control bg-dark text-light' /> <br />
                         <input type="text" name="phn" placeholder='Mobile No.' {...register("phn")} className='form-control bg-dark text-light' /> <br />
                         <input type="text" name='email' placeholder='Your Email Address' {...register("email")} required className='form-control bg-dark text-light' /> <br />

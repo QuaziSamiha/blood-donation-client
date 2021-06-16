@@ -15,3 +15,4 @@ Here user can log in using his google account. In upcoming feature he can also l
 Here one can do registration as a blood donor. Clicking 'Be a Life Saver' button in home page user can move this registration page.
 
 # SearchDonor Component
+this component is used in home component. here we use a form to collect city and blood group information.

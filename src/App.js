@@ -35,15 +35,15 @@ function App() {
           <Route path='/sign-in'>
             <SignIn />
           </Route>
-          <Route path='/search'>
+          <PrivateRoute path='/search'>
             <Search />
-          </Route>
+          </PrivateRoute>
           <Route path='/about-us'>
             <AboutUs />
           </Route>
-          <Route path='/registration'>
+          <PrivateRoute path='/registration'>
             <BeDonor />
-          </Route>
+          </PrivateRoute>
           <Route exact path='/'>
             <Home />
           </Route>
