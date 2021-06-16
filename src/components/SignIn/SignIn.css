@@ -1,8 +1,7 @@
-.all-component {
-    background-color: #282c34;
-    min-height: 100vh;
-    font-size: calc(10px + 2vmin);
-    color: white;
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
 }
 
 .google-btn {
@@ -11,21 +10,27 @@
     margin-bottom: 28px;
 }
 
-img{
-   width: 60px;
-   height: 50px; 
+.google-btn img {
+    width: 60px;
+    height: 50px;
 }
 
-.sign-in-form {
-    margin: 0 20%;
-}
-
-p {
+.login-form p {
     color: rgb(128, 123, 123);
     font-size: 12px;
 }
 
+.login-div {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
 .login-form {
+    padding: 15px;
+    margin: 10px;
+    width: 50%;
+    box-sizing: border-box;
     border-radius: 10px;
     box-shadow: lightslategrey 5px 5px 10px;
 }

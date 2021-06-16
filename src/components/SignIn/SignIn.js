@@ -53,8 +53,8 @@ const SignIn = () => {
     console.log(user);
 
     return (
-        <div className='all-components pt-5'>
-            <div className='text-light sign-in-form pt-5 mt-5'>
+        <div className='pt-5'>
+            <div className='text-light pt-5 mt-5'>
                 {
                     user.isSignedIn ?
                         <div className='text-center'>
@@ -62,8 +62,8 @@ const SignIn = () => {
                             <p className='fs-4'>You Signed in Successfully</p>
                         </div>
                         :
-                        <div className='row'>
-                            <div className='bg-dark mx-5 p-4 col-xs-6 col-sm-10 col-md-10 col-lg-10 login-form'>
+                        <div className='login-div'>
+                            <div className='bg-dark login-form'>
                                 <button onClick={googleSignIn} className='btn btn-primary google-btn'>
                                     <img src={GoogleLogo} alt="" className='google-logo px-2' />
                                     Continue with Google
@@ -91,5 +91,3 @@ const SignIn = () => {
 };
 
 export default SignIn;
-
-//  bg-dark p-5 login-form

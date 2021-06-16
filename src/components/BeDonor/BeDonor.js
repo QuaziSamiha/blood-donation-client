@@ -16,6 +16,7 @@ const BeDonor = () => {
             name: data.name,
             age: data.age,
             gender: data.gender,
+            bloodGroup: data.bloodGrp,
             city: data.city,
             phnNo: data.phn,
             email: data.email,
@@ -59,6 +60,7 @@ const BeDonor = () => {
                         <input type="text" name="name" placeholder='Enter Your Name' {...register("name")} required className='form-control bg-dark text-light' /> <br />
                         <input type="text" name="age" placeholder='Your Age' {...register("age")} required className='form-control bg-dark text-light' /> <br />
                         <input type="text" name="gender" placeholder='Your Gender' {...register("gender")} required className='form-control bg-dark text-light' /> <br />
+                        <input type="text" name="bloodGrp" placeholder='Your Blood Group' {...register("bloodGrp")} required className='form-control bg-dark text-light' /> <br />
                         <input type="text" name="city" placeholder='Your City' {...register("city")} required className='form-control bg-dark text-light' /> <br />
                         <input type="text" name="phn" placeholder='Mobile No.' {...register("phn")} className='form-control bg-dark text-light' /> <br />
                         <input type="text" name='email' placeholder='Your Email Address' {...register("email")} required className='form-control bg-dark text-light' /> <br />
