@@ -10,8 +10,8 @@ const Donor = ({ donor }) => {
             <div className='donor d-flex'>
                 <div className='donor-info'>
                     <p>Name: {name}</p>
-                    <p>City: {city}</p>
-                    <p>Blood Group: {bloodGroup}</p>
+                    {/* <p>City: {city}</p> */}
+                    {/* <p>Blood Group: {bloodGroup}</p> */}
                     <p>Email: {email}</p>
                     <p>Mobile No: {phnNo}</p>
                     <p>Gender: {gender}</p>

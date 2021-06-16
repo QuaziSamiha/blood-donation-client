@@ -1,14 +1,17 @@
-import React from 'react';
+import React, { useContext } from 'react';
 import './BeDonor.css';
 import { useForm } from "react-hook-form";
 import axios from 'axios';
 import { useState } from 'react';
+import UserContext from '../../App';
 
 const BeDonor = () => {
 
     const { register, handleSubmit, formState: { errors } } = useForm();
     const [imageURL, setImageURL] = useState(null);
+
     const [beDonor, setBeDonor] = useState(false);
+    // const [loggedInUser, setLoggedInUser] = useContext(UserContext);
 
     const onSubmit = data => {
         // console.log(data);
@@ -52,6 +55,9 @@ const BeDonor = () => {
             });
     }
 
+    const handleBeDonor = () => {
+        setBeDonor(true);
+    }
     return (
         <div className='all-component text-light'>
             <h4 className='text-center pt-5 mt-5 text-success'>Enter Your Detail Information to Be A Donor</h4>
@@ -81,8 +87,19 @@ const BeDonor = () => {
                         <input type="text" name='email' placeholder='Your Email Address' {...register("email")} required className='form-control bg-dark text-light' /> <br />
                         <label><small>Attach Your Image</small></label>
                         <input type="file" name="photo" onChange={handleImageUpload} className='form-control bg-dark text-light' /> <br />
-                        <input type="submit" className='form-control btn btn-success text-light' />
+                        <input onClick={() => handleBeDonor()} type="submit" className='form-control btn btn-success text-light' />
                     </form>
+
+                    {
+
+                        beDonor === false ?
+                            <span></span>
+                            :
+                            <div className='bg-dark m-2 p-4 border border-dark rounded-3 text-success text-center'>
+                                <h3>CONGRATULATION!!!</h3>
+                                <p>Now You Are A Blood Donor</p>
+                            </div>
+                    }
                 </div>
             </div>
         </div>

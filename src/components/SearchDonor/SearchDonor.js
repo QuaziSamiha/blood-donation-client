@@ -30,7 +30,7 @@ const SearchDonor = (props) => {
                     <legend className='text-center'>Search for Donors</legend>
                     <div className="center-aligned m-3 d-flex row">
                         <div className='col-md-4 col-lg-4'>
-                            <select name="bloodGroup"  {...register("bloodGroup")} className="form-control bg-dark text-light">
+                            <select name="bloodGroup" {...register("bloodGroup")} required className="form-control bg-dark text-light">
                                 <option defaultValue>select blood group</option>
                                 <option value="A negative">A-</option>
                                 <option value="A positive">A+</option>
