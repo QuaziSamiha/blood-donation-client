@@ -23,36 +23,38 @@ function App() {
   const [searchedDonorInfo, setSearchedDonorInfo] = useState([]);
   return (
     <UserContext.Provider value={[loggedInUser, setLoggedInUser]}>
-      <Router>
-        <Header />
-        <Switch>
-          <Route path='/home'>
-            <Home searchedDonorInfo={searchedDonorInfo} setSearchedDonorInfo={setSearchedDonorInfo} />
-          </Route>
-          <PrivateRoute path='/donors'>
-            <Donors />
-          </PrivateRoute>
-          <Route path='/sign-in'>
-            <SignIn />
-          </Route>
-          <PrivateRoute path='/search'>
-            <Search searchedDonorInfo={searchedDonorInfo} setSearchedDonorInfo={setSearchedDonorInfo} />
-          </PrivateRoute>
-          <Route path='/about-us'>
-            <AboutUs />
-          </Route>
-          <PrivateRoute path='/registration'>
-            <BeDonor />
-          </PrivateRoute>
-          <Route exact path='/'>
-            <Home />
-          </Route>
-          <Route path='*'>
-            <PageNotFound />
-          </Route>
-        </Switch>
-      </Router>
-    </UserContext.Provider >
+      <div className='app'>
+        <Router>
+          <Header />
+          <Switch>
+            <Route path='/home'>
+              <Home searchedDonorInfo={searchedDonorInfo} setSearchedDonorInfo={setSearchedDonorInfo} />
+            </Route>
+            <PrivateRoute path='/donors'>
+              <Donors />
+            </PrivateRoute>
+            <Route path='/sign-in'>
+              <SignIn />
+            </Route>
+            <PrivateRoute path='/search'>
+              <Search searchedDonorInfo={searchedDonorInfo} setSearchedDonorInfo={setSearchedDonorInfo} />
+            </PrivateRoute>
+            <Route path='/about-us'>
+              <AboutUs />
+            </Route>
+            <PrivateRoute path='/registration'>
+              <BeDonor />
+            </PrivateRoute>
+            <Route exact path='/'>
+              <Home />
+            </Route>
+            <Route path='*'>
+              <PageNotFound />
+            </Route>
+          </Switch>
+        </Router>
+      </div> 
+      </UserContext.Provider >
   );
 }
 

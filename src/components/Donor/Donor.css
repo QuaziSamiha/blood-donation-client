@@ -1,0 +1,32 @@
+.all-component {
+    background-color: #282c34;
+    color: white;
+}
+
+.donor {
+    padding: 15px;
+    margin: 10%;
+    width: 60%;
+    box-sizing: border-box;
+    border: darkslategrey solid 1px;
+    border-radius: 15px;
+    box-shadow: darkslategrey 5px 5px 10px;
+}
+
+.donor-info {
+    width: 70%;
+}
+
+.donor-info p{
+    font-size: small;
+}
+
+.donor-img {
+    width: 30%;
+}
+
+.donor-img img {
+    height: 90px;
+    width: 80px;
+    border-radius: 10px;
+}

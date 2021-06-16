@@ -24,7 +24,7 @@ const SearchDonor = (props) => {
     }
 
     return (
-        <div className='container all-component'>
+        <div className='all-component px-5'>
             <div className='p-5 bg-dark border border-dark rounded-3'>
                 <form onSubmit={handleSubmit(onSubmit)}>
                     <legend className='text-center'>Search for Donors</legend>

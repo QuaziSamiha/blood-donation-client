@@ -1,15 +1,15 @@
 import React from 'react';
 import './Search.css';
+import Donor from '../Donor/Donor';
 
 const Search = (props) => {
 
     const { searchedDonorInfo, setSearchedDonorInfo } = props;
-   
+//    console.log(props.searchedDonorInfo);
     return (
-        <div className='all-component'>
-            {/* <h2>this is search</h2> */}
+        <div className='all-component row'>
             {
-                searchedDonorInfo.map(donor => <p>{donor.city}</p>)
+                searchedDonorInfo.map(donor => <Donor donor={donor}></Donor>)
             }
         </div>
     );

@@ -1,9 +1,9 @@
-/* .all-component {
+.all-component {
     background-color: #282c34;
     min-height: 100vh;
-    font-size: calc(10px + 2vmin);
-    color: white;
-} */
+    /* font-size: calc(10px + 2vmin); */
+    /* color: white; */
+}
 
 .life-saver{
     border: maroon solid 1px;

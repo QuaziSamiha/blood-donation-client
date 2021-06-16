@@ -8,6 +8,7 @@ const BeDonor = () => {
 
     const { register, handleSubmit, formState: { errors } } = useForm();
     const [imageURL, setImageURL] = useState(null);
+    const [beDonor, setBeDonor] = useState(false);
 
     const onSubmit = data => {
         // console.log(data);
@@ -90,4 +91,3 @@ const BeDonor = () => {
 
 export default BeDonor;
 
-//  
