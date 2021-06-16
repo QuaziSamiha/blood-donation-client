@@ -1,14 +1,16 @@
-import React, { useContext } from 'react';
-import { UserContext } from '../../App';
+import React from 'react';
 import './Search.css';
 
-const Search = ({donorInfo}) => {
+const Search = (props) => {
 
-    // const [loggedInUser] = useContext(UserContext);
-    // loggedInUser.email ? console.log(donorInfo.email) : console.log('gu')
+    const { searchedDonorInfo, setSearchedDonorInfo } = props;
+   
     return (
         <div className='all-component'>
             {/* <h2>this is search</h2> */}
+            {
+                searchedDonorInfo.map(donor => <p>{donor.city}</p>)
+            }
         </div>
     );
 };

@@ -7,7 +7,9 @@ import SearchDonor from '../SearchDonor/SearchDonor';
 import LifeSaveBanner from '../LifeSaveBanner/LifeSaveBanner';
 import Footer from '../Footer/Footer';
 
-const Home = () => {
+const Home = (props) => {
+
+    const { searchedDonorInfo, setSearchedDonorInfo } = props;
     return (
         <div className='all-component pt-0'>
             <div id="carouselExampleCaptions" className="carousel slide blood-banner" data-bs-ride="carousel">
@@ -49,9 +51,9 @@ const Home = () => {
                 </button>
             </div>
 
-            <SearchDonor/>
-            <LifeSaveBanner/>
-            <Footer/>
+            <SearchDonor searchedDonorInfo={searchedDonorInfo} setSearchedDonorInfo={setSearchedDonorInfo} />
+            <LifeSaveBanner />
+            <Footer />
         </div>
     );
 };

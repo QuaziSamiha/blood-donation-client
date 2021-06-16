@@ -20,14 +20,14 @@ export const UserContext = createContext();
 function App() {
 
   const [loggedInUser, setLoggedInUser] = useState({});
-
+  const [searchedDonorInfo, setSearchedDonorInfo] = useState([]);
   return (
     <UserContext.Provider value={[loggedInUser, setLoggedInUser]}>
       <Router>
         <Header />
         <Switch>
           <Route path='/home'>
-            <Home />
+            <Home searchedDonorInfo={searchedDonorInfo} setSearchedDonorInfo={setSearchedDonorInfo} />
           </Route>
           <PrivateRoute path='/donors'>
             <Donors />
@@ -36,7 +36,7 @@ function App() {
             <SignIn />
           </Route>
           <PrivateRoute path='/search'>
-            <Search />
+            <Search searchedDonorInfo={searchedDonorInfo} setSearchedDonorInfo={setSearchedDonorInfo} />
           </PrivateRoute>
           <Route path='/about-us'>
             <AboutUs />

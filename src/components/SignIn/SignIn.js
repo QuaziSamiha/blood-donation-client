@@ -58,7 +58,7 @@ const SignIn = () => {
             });
     }
 
-    console.log(user);
+    // console.log(user);
 
     return (
         <div className='pt-5 all-component'>
