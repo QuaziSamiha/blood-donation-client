@@ -12,19 +12,26 @@ import AboutUs from './components/AboutUs/AboutUs';
 import PageNotFound from './components/PageNotFound/PageNotFound';
 import Header from './components/Header/Header';
 import BeDonor from './components/BeDonor/BeDonor';
+import { createContext, useState } from 'react';
+import PrivateRoute from './components/PrivateRoute/PrivateRoute';
+
+export const UserContext = createContext();
 
 function App() {
+
+  const [loggedInUser, setLoggedInUser] = useState({});
+
   return (
-    <div className='app'>
+    <UserContext.Provider value={[loggedInUser, setLoggedInUser]}>
       <Router>
-      <Header/>
+        <Header />
         <Switch>
           <Route path='/home'>
             <Home />
           </Route>
-          <Route path='/donors'>
+          <PrivateRoute path='/donors'>
             <Donors />
-          </Route>
+          </PrivateRoute>
           <Route path='/sign-in'>
             <SignIn />
           </Route>
@@ -35,7 +42,7 @@ function App() {
             <AboutUs />
           </Route>
           <Route path='/registration'>
-            <BeDonor/>
+            <BeDonor />
           </Route>
           <Route exact path='/'>
             <Home />
@@ -45,7 +52,7 @@ function App() {
           </Route>
         </Switch>
       </Router>
-    </div>
+    </UserContext.Provider >
   );
 }
 

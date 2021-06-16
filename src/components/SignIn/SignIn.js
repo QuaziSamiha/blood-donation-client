@@ -1,10 +1,12 @@
-import React from 'react';
+import React, { useContext } from 'react';
 import './SignIn.css';
 import GoogleLogo from '../../images/google-logo.png';
 import firebase from "firebase/app";
 import "firebase/auth";
 import firebaseConfig from './firebase.config';
 import { useState } from 'react';
+import { UserContext } from '../../App';
+import { useHistory, useLocation } from 'react-router-dom';
 
 if (!firebase.apps.length) {
     firebase.initializeApp(firebaseConfig);
@@ -22,6 +24,10 @@ const SignIn = () => {
     });
     const googleProvider = new firebase.auth.GoogleAuthProvider();
 
+    const [loggedInUser, setLoggedInUser] = useContext(UserContext);
+    const history = useHistory();
+    const location = useLocation();
+    let { from } = location.state || { from: { pathname: '/' } };
 
     const googleSignIn = () => {
         firebase.auth()
@@ -37,6 +43,8 @@ const SignIn = () => {
                 }
                 // console.log(result.user);
                 setUser(signedInUser);
+                setLoggedInUser(signedInUser);
+                history.replace(from);
             })
             .catch((error) => {
                 const errorMessage = error.message;
@@ -53,7 +61,7 @@ const SignIn = () => {
     console.log(user);
 
     return (
-        <div className='pt-5'>
+        <div className='pt-5 all-component'>
             <div className='text-light pt-5 mt-5'>
                 {
                     user.isSignedIn ?
