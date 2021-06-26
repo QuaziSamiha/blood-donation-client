@@ -72,14 +72,14 @@ const BeDonor = () => {
                         <div className='col-md-4 col-lg-4'>
                             <select name="bloodGrp"  {...register("bloodGrp")} className="form-control bg-dark text-light">
                                 <option defaultValue>select blood group</option>
-                                <option value="A negative">A-</option>
-                                <option value="A positive">A+</option>
-                                <option value="B negative">B-</option>
-                                <option value="B positive">B+</option>
-                                <option value="AB negative">AB-</option>
-                                <option value="AB positive">AB+</option>
-                                <option value="O negative">O-</option>
-                                <option value="O positive">O+</option>
+                                <option value="A-">A-</option>
+                                <option value="A+">A+</option>
+                                <option value="B-">B-</option>
+                                <option value="B+">B+</option>
+                                <option value="AB-">AB-</option>
+                                <option value="AB+">AB+</option>
+                                <option value="O-">O-</option>
+                                <option value="O+">O+</option>
                             </select> <br />
                         </div>
                         <input type="text" name="city" placeholder='Your City' {...register("city")} required className='form-control bg-dark text-light' /> <br />

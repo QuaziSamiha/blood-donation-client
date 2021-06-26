@@ -23,6 +23,8 @@ const SearchDonor = (props) => {
             })
     }
 
+    // console.log(searchedDonorInfo);
+
     return (
         <div className='all-component px-5'>
             <div className='p-5 bg-dark border border-dark rounded-3'>
@@ -32,14 +34,14 @@ const SearchDonor = (props) => {
                         <div className='col-md-4 col-lg-4'>
                             <select name="bloodGroup" {...register("bloodGroup")} required className="form-control bg-dark text-light">
                                 <option defaultValue>select blood group</option>
-                                <option value="A negative">A-</option>
-                                <option value="A positive">A+</option>
-                                <option value="B negative">B-</option>
-                                <option value="B positive">B+</option>
-                                <option value="AB negative">AB-</option>
-                                <option value="AB positive">AB+</option>
-                                <option value="O negative">O-</option>
-                                <option value="O positive">O+</option>
+                                <option value="A-">A-</option>
+                                <option value="A%2B">A+</option>
+                                <option value="B-">B-</option>
+                                <option value="B%2B">B+</option>
+                                <option value="AB-">AB-</option>
+                                <option value="AB%2B">AB+</option>
+                                <option value="O-">O-</option>
+                                <option value="O%2B">O+</option>
                             </select> <br />
                         </div>
                         <div className='col-md-4 col-lg-4'>
@@ -70,6 +72,3 @@ const SearchDonor = (props) => {
 };
 
 export default SearchDonor;
-
-// form-group 
-//  onClick={() => handleSearch(searchedDonorInfo)}
