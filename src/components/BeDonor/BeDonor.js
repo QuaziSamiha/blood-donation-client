@@ -27,7 +27,9 @@ const BeDonor = () => {
             imageUrl: imageURL
         }
 
-        const url = `http://localhost:5055/beDonor`;
+        // const url = `http://localhost:5055/beDonor`;
+        
+        const url = `https://whispering-woodland-72477.herokuapp.com/beDonor`;
         fetch(url, {
             method: 'POST',
             headers: {

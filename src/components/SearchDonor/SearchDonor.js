@@ -14,7 +14,7 @@ const SearchDonor = (props) => {
 
     const onSubmit = data => {
         // console.log(data);
-        fetch(`http://localhost:5055/searchDonors?city=${data.city}&bloodGroup=${data.bloodGroup}`)
+        fetch(`https://whispering-woodland-72477.herokuapp.com/searchDonors?city=${data.city}&bloodGroup=${data.bloodGroup}`)
             .then(res => res.json())
             .then(data => {
                 // console.log(data);
@@ -23,7 +23,7 @@ const SearchDonor = (props) => {
             })
     }
 
-    // console.log(searchedDonorInfo);
+    console.log(searchedDonorInfo);
 
     return (
         <div className='all-component px-5'>
