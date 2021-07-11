@@ -1,4 +1,4 @@
-.all-component {
+.all_component {
     padding-top: 100px;
     background-color: #282c34;
     min-height: 70vh;
@@ -6,6 +6,6 @@
     color: white;
 }
 
-.all-btn:hover {
+.all_btn:hover {
     box-shadow: grey 3px 3px 10px;
 }

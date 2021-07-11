@@ -1,41 +1,41 @@
 *{
     padding: 0;
     margin: 0;
-    box-sizing: border-box;
+    box-sizing: border_box;
 }
 
-.all-component {
+.all_component {
     background-color: #282c34;
     color: white;
 }
 
-.google-btn {
+.google_btn {
     width: 100%;
     border-radius: 20px;
     margin-bottom: 28px;
 }
 
-.google-btn img {
+.google_btn img {
     width: 60px;
     height: 50px;
 }
 
-.login-form p {
+.login_form p {
     color: rgb(128, 123, 123);
     font-size: 12px;
 }
 
-.login-div {
+.login_div {
     display: flex;
     justify-content: center;
     align-items: center;
 }
 
-.login-form {
+.login_form {
     padding: 15px;
     margin: 10px;
     width: 50%;
-    box-sizing: border-box;
+    box-sizing: border_box;
     border-radius: 10px;
     box-shadow: lightslategrey 5px 5px 10px;
 }

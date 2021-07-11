@@ -1,4 +1,4 @@
-.all-component {
+.all_component {
     background-color: #282c34;
     color: white;
 }
@@ -13,19 +13,19 @@
     box-shadow: darkslategrey 5px 5px 10px;
 }
 
-.donor-info {
+.donor_info {
     width: 70%;
 }
 
-.donor-info p{
+.donor_info p{
     font-size: small;
 }
 
-.donor-img {
+.donor_img {
     width: 30%;
 }
 
-.donor-img img {
+.donor_img img {
     height: 90px;
     width: 80px;
     border-radius: 10px;

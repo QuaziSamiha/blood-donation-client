@@ -4,13 +4,13 @@
     box-sizing: border-box;
 }
 
-.all-component {
+.all_component {
     background-color: #282c34;
     color: white;
     min-height: 100vh;
 }
 
-.donor-form {
+.donor_form {
     padding-top: 30px;
     display: flex;
     justify-content: center;
@@ -19,7 +19,7 @@
     place-items: center; */
 }
 
-.donor-form2{
+.donor_form2{
     border: slategrey solid 1px;
     border-radius: 10px;
     box-shadow: slategrey 2px 2px 10px;

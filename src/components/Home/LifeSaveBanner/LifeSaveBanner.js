@@ -1,10 +1,10 @@
 import React from 'react';
-import './LifeSaveBanner.css';
+import styles from './LifeSaveBanner.module.css';
 import { Link } from 'react-router-dom';
 
 const LifeSaveBanner = () => {
     return (
-        <div className='all-component'>
+        <div className={styles.all_component}>
             <div className='bg-danger'>
                 <h1 className="text-center pt-3">Donate The Blood</h1>
                 <p className='px-5 mx-5 fs-5 text-light'>
@@ -19,7 +19,7 @@ const LifeSaveBanner = () => {
                 </p>
                 <div className='text-center'>
                     <Link to='/registration'>
-                        <button className='life-saver'>Be a Life Saver</button>
+                        <button className={styles.life_saver}>Be a Life Saver</button>
                     </Link>
                 </div>
             </div>

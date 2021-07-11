@@ -1,11 +1,11 @@
-.all-component {
+.all_component {
     background-color: #282c34;
     min-height: 100vh;
     /* font-size: calc(10px + 2vmin); */
     color: white;
 }
 
-.blood-banner img {
+.blood_banner img {
     height: 460px;
     width: 100%;
 }

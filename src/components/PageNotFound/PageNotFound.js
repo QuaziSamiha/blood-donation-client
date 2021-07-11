@@ -1,11 +1,15 @@
 import React from 'react';
-import './PageNotFound.css';
+import Navbar from '../Shared/Navbar/Navbar';
+import styles from './PageNotFound.module.css';
 
 const PageNotFound = () => {
     return (
-        <div className='all-component text-danger text-center'>
-            <h2>Error 404!!</h2>
-            <h4>Page is not Found</h4>
+        <div className={styles.all_component}>
+            <div className='text-danger text-center' >
+                <Navbar />
+                <h2>Error 404!!</h2>
+                <h4>Page is not Found</h4>
+            </div>
         </div>
     );
 };
