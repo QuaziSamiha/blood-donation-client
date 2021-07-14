@@ -8,6 +8,7 @@ import { useState } from 'react';
 import { UserContext } from '../../App';
 import { useHistory, useLocation } from 'react-router-dom';
 import Navbar from '../Shared/Navbar/Navbar';
+import Footer from '../Shared/Footer/Footer';
 
 if (!firebase.apps.length) {
     firebase.initializeApp(firebaseConfig);
@@ -64,44 +65,41 @@ const SignIn = () => {
     return (
         <div className={styles.all_component}>
             <Navbar />
-            <div className='pt-5'>
-                <div className='text-light pt-5 mt-5'>
-                    {
-                        user.isSignedIn ?
-                            <div className='text-center'>
-                                <h3>Welcome {user.name}!!!</h3>
-                                <p className='fs-4'>You Signed in Successfully</p>
-                            </div>
-                            :
-                            <div className={styles.login_div}>
-                                <div className={styles.login_form}>
-                                    <div className='bg-dark login-form'>
-                                        <div className={styles.google_btn}>
-                                            <button onClick={googleSignIn} className='btn btn-primary'>
-                                                <img src={GoogleLogo} alt="" className='px-2' />
-                                                Continue with Google
-                                            </button>
-                                        </div>
 
-                                        <div className='d-flex'>
-                                            <div style={{ width: '45%' }}> <hr /> </div>
-                                            <p className='fs-5 px-3'> or </p>
-                                            <div style={{ width: '45%' }}> <hr /> </div>
-                                        </div>
-
-                                        <form action="" >
-                                            <input className='form-control bg-dark text-light' type="text" name="" placeholder='Your Name' /> <br />
-                                            <input className='form-control bg-dark text-light' type="text" name="" placeholder='Your Email Address' /> <br />
-                                            <input className='form-control bg-dark text-light' type="password" name="" placeholder='Your Password' />
-                                            <p className='fs-6'><small>8 characters minimum</small></p>
-                                            <input className='form-control bg-success text-light' type="submit" value="Sign up" />
-                                        </form>
-                                    </div>
-                                </div>
+            {
+                user.isSignedIn ?
+                    <div className='text-center'>
+                        <h3>Welcome {user.name}!!!</h3>
+                        <p className='fs-4'>You Signed in Successfully</p>
+                    </div>
+                    :
+                    <div className={styles.login_div}>
+                        <div className={styles.login_form}>
+                            <div>
+                                <button onClick={googleSignIn} className='btn btn-primary'>
+                                    <img src={GoogleLogo} alt="" />
+                                    Continue with Google
+                                </button>
                             </div>
-                    }
-                </div>
-            </div>
+
+                            <div className='d-flex'>
+                                <div style={{ width: '45%' }}> <hr /> </div>
+                                <p className='fs-5 px-3'> or </p>
+                                <div style={{ width: '45%' }}> <hr /> </div>
+                            </div>
+
+                            <form action="" >
+                                <input className='form-control' type="text" name="" placeholder='Your Name' /> <br />
+                                <input className='form-control' type="text" name="" placeholder='Your Email Address' /> <br />
+                                <input className='form-control' type="password" name="" placeholder='Your Password' />
+                                <p><small>8 characters minimum</small></p>
+                                <input className='form-control bg-success text-light' type="submit" value="Sign up" />
+                            </form>
+                        </div>
+                    </div>
+            }
+
+            <Footer />
         </div>
     );
 };

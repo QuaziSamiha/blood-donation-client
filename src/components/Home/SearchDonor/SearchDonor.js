@@ -48,11 +48,11 @@ const SearchDonor = (props) => {
                             <div className='col-md-4 col-lg-4'>
                                 <input type="text" name="city" {...register("city")} placeholder='city name...' required className='city-name form-control bg-dark text-light' /> <br />
                             </div>
-                            <div className={styles.all_btn}>
+                            {/* <span className={styles.all_btn}> */}
                                 <div className='col-md-4 col-lg-4'>
                                     <input type="submit" value="search" className='form-control bg-danger text-light border rounded-3' />
                                 </div>
-                            </div>
+                            {/* </span> */}
                         </div>
                     </form>
                 </div>

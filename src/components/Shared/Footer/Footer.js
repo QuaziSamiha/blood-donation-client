@@ -8,7 +8,7 @@ import { faFacebookMessenger, faWhatsapp } from '@fortawesome/free-brands-svg-ic
 
 const Footer = () => {
     return (
-        <div className='text-light mt-0'>
+        <div className='text-light mt-5'>
             <div className='text-center bg-dark p-4'>
                 <h5><small>contact with us</small></h5>
                     <Link to='/' className='px-3 text-light fs-2'>

@@ -5,6 +5,7 @@ import axios from 'axios';
 import { useState } from 'react';
 import UserContext from '../../../App';
 import Navbar from '../../Shared/Navbar/Navbar';
+import Footer from '../../Shared/Footer/Footer';
 
 const BeDonor = () => {
 
@@ -61,55 +62,54 @@ const BeDonor = () => {
     const handleBeDonor = () => {
         setBeDonor(true);
     }
+
     return (
         <div styles={styles.all_component}>
             <Navbar />
             <div className='text-light'>
-                <h4 className='text-center pt-5 mt-5 text-success'>Enter Your Detail Information to Be A Donor</h4>
+                <h4 className='text-center text-success'>Enter Your Detail Information to Be A Donor</h4>
                 <div className={styles.donor_form}>
                     <div className={styles.donor_form2}>
-                        <div className='bg-dark m-3 p-5 col-sm-10 col-md-8 col-lg-6 '>
-                            <form onSubmit={handleSubmit(onSubmit)}>
-                                <input type="text" name="nid" placeholder='NID No.' {...register("nid")} className='form-control bg-dark text-light' /> <br />
-                                <input type="text" name="name" placeholder='Enter Your Name' {...register("name")} required className='form-control bg-dark text-light' /> <br />
-                                <input type="text" name="age" placeholder='Your Age' {...register("age")} required className='form-control bg-dark text-light' /> <br />
-                                <input type="text" name="gender" placeholder='Your Gender' {...register("gender")} required className='form-control bg-dark text-light' /> <br />
-                                {/* <input type="text" name="bloodGrp" placeholder='Your Blood Group' {...register("bloodGrp")} required className='form-control bg-dark text-light' /> <br /> */}
-                                <div className='col-md-4 col-lg-4'>
-                                    <select name="bloodGrp"  {...register("bloodGrp")} className="form-control bg-dark text-light">
-                                        <option defaultValue>select blood group</option>
-                                        <option value="A-">A-</option>
-                                        <option value="A+">A+</option>
-                                        <option value="B-">B-</option>
-                                        <option value="B+">B+</option>
-                                        <option value="AB-">AB-</option>
-                                        <option value="AB+">AB+</option>
-                                        <option value="O-">O-</option>
-                                        <option value="O+">O+</option>
-                                    </select> <br />
+                        <form onSubmit={handleSubmit(onSubmit)}>
+                            <input type="text" name="nid" placeholder='NID No.' {...register("nid")} className='form-control' /> <br />
+                            <input type="text" name="name" placeholder='Enter Your Name' {...register("name")} required className='form-control' /> <br />
+                            <input type="text" name="age" placeholder='Your Age' {...register("age")} required className='form-control' /> <br />
+                            <input type="text" name="gender" placeholder='Your Gender' {...register("gender")} required className='form-control' /> <br />
+                            {/* <div className='col-md-4 col-lg-4'> */}
+                                <select name="bloodGrp"  {...register("bloodGrp")} className="form-control">
+                                    <option defaultValue>select blood group</option>
+                                    <option value="A-">A-</option>
+                                    <option value="A+">A+</option>
+                                    <option value="B-">B-</option>
+                                    <option value="B+">B+</option>
+                                    <option value="AB-">AB-</option>
+                                    <option value="AB+">AB+</option>
+                                    <option value="O-">O-</option>
+                                    <option value="O+">O+</option>
+                                </select> <br />
+                            {/* </div> */}
+                            <input type="text" name="city" placeholder='Your City' {...register("city")} required className='form-control' /> <br />
+                            <input type="text" name="phn" placeholder='Mobile No.' {...register("phn")} className='form-control' /> <br />
+                            <input type="text" name='email' placeholder='Your Email Address' {...register("email")} required className='form-control' /> <br />
+                            <label><small>Attach Your Image</small></label>
+                            <input type="file" name="photo" onChange={handleImageUpload} className='form-control' /> <br />
+                            <input onClick={() => handleBeDonor()} type="submit" className='form-control btn btn-success text-light' />
+                        </form>
+
+                        {
+
+                            beDonor === false ?
+                                <span></span>
+                                :
+                                <div className='bg-dark m-2 p-4 border border-dark rounded-3 text-success text-center'>
+                                    <h3>CONGRATULATION!!!</h3>
+                                    <p>Now You Are A Blood Donor</p>
                                 </div>
-                                <input type="text" name="city" placeholder='Your City' {...register("city")} required className='form-control bg-dark text-light' /> <br />
-                                <input type="text" name="phn" placeholder='Mobile No.' {...register("phn")} className='form-control bg-dark text-light' /> <br />
-                                <input type="text" name='email' placeholder='Your Email Address' {...register("email")} required className='form-control bg-dark text-light' /> <br />
-                                <label><small>Attach Your Image</small></label>
-                                <input type="file" name="photo" onChange={handleImageUpload} className='form-control bg-dark text-light' /> <br />
-                                <input onClick={() => handleBeDonor()} type="submit" className='form-control btn btn-success text-light' />
-                            </form>
-
-                            {
-
-                                beDonor === false ?
-                                    <span></span>
-                                    :
-                                    <div className='bg-dark m-2 p-4 border border-dark rounded-3 text-success text-center'>
-                                        <h3>CONGRATULATION!!!</h3>
-                                        <p>Now You Are A Blood Donor</p>
-                                    </div>
-                            }
-                        </div>
+                        }
                     </div>
                 </div>
             </div>
+            <Footer />
         </div>
     );
 };

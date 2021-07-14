@@ -1,28 +1,25 @@
 *{
     padding: 0;
     margin: 0;
-    box-sizing: border_box;
+    box-sizing: border-box;
 }
 
 .all_component {
+    padding-top: 100px;
     background-color: #282c34;
     color: white;
 }
 
-.google_btn {
+button {
     width: 100%;
     border-radius: 20px;
-    margin-bottom: 28px;
+    margin-bottom: 50px;
 }
 
-.google_btn img {
-    width: 60px;
+img{
     height: 50px;
-}
-
-.login_form p {
-    color: rgb(128, 123, 123);
-    font-size: 12px;
+    width: 55px;
+    margin: 6px;
 }
 
 .login_div {
@@ -32,10 +29,24 @@
 }
 
 .login_form {
-    padding: 15px;
-    margin: 10px;
-    width: 50%;
-    box-sizing: border_box;
-    border-radius: 10px;
-    box-shadow: lightslategrey 5px 5px 10px;
+    text-align: center;
+    background-color: #212529;
+    padding: 25px;
+    margin: 80px 10px;
+    width: 45%;
+    border-radius: 15px;
+    box-shadow: rgb(92, 101, 109) 5px 5px 30px -5px;
 }
+
+.login_form input{
+    color: lightgray;
+    background-color: transparent;
+    /* border: none; */
+    /* border-bottom: 1px solid grey; */
+}
+
+.login_form p {
+    color: rgb(128, 123, 123);
+    font-size: 15px;
+}
+

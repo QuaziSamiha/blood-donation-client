@@ -9,3 +9,7 @@
 .all_btn:hover {
     box-shadow: grey 3px 3px 10px;
 }
+
+button{
+    width: 100px;
+}
