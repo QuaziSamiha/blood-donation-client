@@ -47,8 +47,8 @@ const SignIn = () => {
                 }
                 // console.log(result.user);
                 setUser(signedInUser);
-                // setLoggedInUser(signedInUser);
-                // history.replace(from);
+                setLoggedInUser(signedInUser);
+                history.replace(from);
             })
             .catch((error) => {
                 const errorMessage = error.message;
