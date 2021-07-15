@@ -1,15 +1,40 @@
-.blood_drop_logo img{
+.blood_drop_logo {
     height: 50px;
+    font-size: 25px;
+    font-weight: 700;
+    text-shadow: 4px 3px #460000;
 }
 
-.all_links:hover {
-    background-color: grey;
-    box-shadow: rgb(126, 87, 87) 1px 1px 10px;
-    border-radius: 4px;
-    padding: 10px;
+.all_links {
+    color: honeydew;
+    font-size: 18px;
+    font-weight: bold;
+    margin-right: 10px;
+    padding-bottom: 10px;
+    position: relative;
+}
+
+
+.all_links:before {
+    content: "";
+    position: absolute;
+    top: 80%;
+    left: 0%;
+    width: 0;
+    height: 2px;
+    border-bottom: 2px solid #FB5968;
+    transition: all 0.4s linear;
+}
+
+.all_links:hover:before {
+    width: 100%;
+}
+
+.all_btn button{
+    font-weight: bold;
 }
 
 .all_btn button:hover {
-    box-shadow: grey 3px 3px 10px;
+    box-shadow:  #460000 4px 4px 10px -5px;
     padding: 10px;
 }

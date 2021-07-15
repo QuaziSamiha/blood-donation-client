@@ -25,7 +25,6 @@ const SignIn = () => {
         success: false
     });
 
-    // console.log(user);
     const googleProvider = new firebase.auth.GoogleAuthProvider();
 
     const [loggedInUser, setLoggedInUser] = useContext(UserContext);
@@ -45,7 +44,6 @@ const SignIn = () => {
                     error: false,
                     success: true
                 }
-                // console.log(result.user);
                 setUser(signedInUser);
                 setLoggedInUser(signedInUser);
                 history.replace(from);
@@ -62,44 +60,33 @@ const SignIn = () => {
             });
     }
 
-    // console.log(user);
-
     return (
         <div className={styles.all_component}>
             <Navbar />
-
-            {
-                user.isSignedIn ?
-                    <div className='text-center'>
-                        <h3>Welcome {user.name}!!!</h3>
-                        <p className='fs-4'>You Signed in Successfully</p>
+            <div className={styles.login_div}>
+                <div className={styles.login_form}>
+                    <div>
+                        <button onClick={googleSignIn} className='btn btn-primary'>
+                            <img src={GoogleLogo} alt="" />
+                            Continue with Google
+                        </button>
                     </div>
-                    :
-                    <div className={styles.login_div}>
-                        <div className={styles.login_form}>
-                            <div>
-                                <button onClick={googleSignIn} className='btn btn-primary'>
-                                    <img src={GoogleLogo} alt="" />
-                                    Continue with Google
-                                </button>
-                            </div>
 
-                            <div className='d-flex'>
-                                <div style={{ width: '45%' }}> <hr /> </div>
-                                <p className='fs-5 px-3'> or </p>
-                                <div style={{ width: '45%' }}> <hr /> </div>
-                            </div>
-
-                            <form action="" >
-                                <input className='form-control' type="text" name="" placeholder='Your Name' /> <br />
-                                <input className='form-control' type="text" name="" placeholder='Your Email Address' /> <br />
-                                <input className='form-control' type="password" name="" placeholder='Your Password' />
-                                <p><small>8 characters minimum</small></p>
-                                <input className='form-control bg-success text-light' type="submit" value="Sign up" />
-                            </form>
-                        </div>
+                    <div className='d-flex'>
+                        <div style={{ width: '45%' }}> <hr /> </div>
+                        <p className='fs-5 px-3'> or </p>
+                        <div style={{ width: '45%' }}> <hr /> </div>
                     </div>
-             } 
+
+                    <form action="" >
+                        <input className='form-control' type="text" name="" placeholder='Your Name' /> <br />
+                        <input className='form-control' type="text" name="" placeholder='Your Email Address' /> <br />
+                        <input className='form-control' type="password" name="" placeholder='Your Password' />
+                        <p><small>8 characters minimum</small></p>
+                        <input className='form-control bg-success text-light' type="submit" value="Sign up" />
+                    </form>
+                </div>
+            </div>
 
             <Footer />
         </div>
