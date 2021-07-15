@@ -25,7 +25,7 @@ const SignIn = () => {
         success: false
     });
 
-    console.log(user);
+    // console.log(user);
     const googleProvider = new firebase.auth.GoogleAuthProvider();
 
     const [loggedInUser, setLoggedInUser] = useContext(UserContext);

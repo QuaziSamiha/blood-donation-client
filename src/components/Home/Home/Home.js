@@ -7,11 +7,10 @@ import Header from '../Header/Header';
 
 const Home = (props) => {
 
-    const { searchedDonorInfo, setSearchedDonorInfo } = props;
     return (
         <div className={styles.all_component}>
             <Header />
-            <SearchDonor searchedDonorInfo={searchedDonorInfo} setSearchedDonorInfo={setSearchedDonorInfo} />
+            <SearchDonor />
             <LifeSaveBanner />
             <Footer />
         </div>

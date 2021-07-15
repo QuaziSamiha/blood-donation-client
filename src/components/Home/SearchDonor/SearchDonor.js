@@ -1,15 +1,14 @@
-import React from 'react';
+import React, { useContext } from 'react';
 import styles from './SearchDonor.module.css';
 import { useForm } from "react-hook-form";
 import { useState } from 'react';
 import { Link } from 'react-router-dom';
+import { DonorContext } from '../../../App';
 
-const SearchDonor = (props) => {
-
+const SearchDonor = () => {
     const { register, handleSubmit, formState: { errors } } = useForm();
-    // const [searchedDonorInfo, setSearchedDonorInfo] = useState([]);
-    const { searchedDonorInfo, setSearchedDonorInfo } = props;
 
+    const [searchDonorInfo, setSearchDonorInfo] = useContext(DonorContext);
     const [isSearched, setIsSearched] = useState(false);
 
     const onSubmit = data => {
@@ -19,11 +18,9 @@ const SearchDonor = (props) => {
             .then(data => {
                 // console.log(data);
                 setIsSearched(true);
-                setSearchedDonorInfo(data);
+                setSearchDonorInfo(data);
             })
     }
-
-    console.log(searchedDonorInfo);
 
     return (
         <div className={styles.all_component}>
@@ -48,19 +45,17 @@ const SearchDonor = (props) => {
                             <div className='col-md-4 col-lg-4'>
                                 <input type="text" name="city" {...register("city")} placeholder='city name...' required className='city-name form-control bg-dark text-light' /> <br />
                             </div>
-                            {/* <span className={styles.all_btn}> */}
-                                <div className='col-md-4 col-lg-4'>
-                                    <input type="submit" value="search" className='form-control bg-danger text-light border rounded-3' />
-                                </div>
-                            {/* </span> */}
+                            <div className='col-md-4 col-lg-4'>
+                                <input type="submit" value="search" className='form-control bg-danger text-light border rounded-3' />
+                            </div>
                         </div>
                     </form>
                 </div>
 
                 {
                     isSearched === true ?
-                        <div className='p-4 mt-5 bg-dark border border-dark rounded-3 text-center'>
-                            <h4>According to Your Search {searchedDonorInfo.length} Donors Available</h4>
+                        <div className='p-5 mt-5 mb-5 bg-dark border border-dark rounded-3 text-center'>
+                            <h4>According to Your Search {searchDonorInfo.length} Donors Available</h4>
                             <Link to='/search'>
                                 <button className='btn btn-success'>Donor Details</button>
                             </Link>

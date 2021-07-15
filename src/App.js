@@ -1,4 +1,4 @@
-import './App.css';
+import styles from './App.module.css';
 import {
   BrowserRouter as Router,
   Switch,
@@ -15,6 +15,7 @@ import { createContext, useState } from 'react';
 import PrivateRoute from './components/PrivateRoute/PrivateRoute';
 
 export const UserContext = createContext();
+export const DonorContext = createContext();
 
 function App() {
 
@@ -23,37 +24,41 @@ function App() {
 
   return (
     <UserContext.Provider value={[loggedInUser, setLoggedInUser]}>
-      <div className='app'>
-        <Router>
-          <Switch>
-            <Route path='/home'>
-              <Home searchedDonorInfo={searchedDonorInfo} setSearchedDonorInfo={setSearchedDonorInfo} />
-            </Route>
-            <PrivateRoute path='/donors'>
-              <Donors />
-            </PrivateRoute>
-            <Route path='/sign-in'>
-              <SignIn />
-            </Route>
-            <PrivateRoute path='/search'>
-              <Search searchedDonorInfo={searchedDonorInfo} setSearchedDonorInfo={setSearchedDonorInfo} />
-            </PrivateRoute>
-            <Route path='/about-us'>
-              <AboutUs />
-            </Route>
-            <PrivateRoute path='/registration'>
-              <BeDonor />
-            </PrivateRoute>
-            <Route exact path='/'>
-              <Home />
-            </Route>
-            <Route path='*'>
-              <PageNotFound />
-            </Route>
-          </Switch>
-        </Router>
-      </div> 
-      </UserContext.Provider >
+      <DonorContext.Provider value={[searchedDonorInfo, setSearchedDonorInfo]}>
+        <div className={styles.app}>
+          <Router>
+            <Switch>
+              <Route path='/home'>
+                {/* <Home searchedDonorInfo={searchedDonorInfo} setSearchedDonorInfo={setSearchedDonorInfo} /> */}
+                <Home />
+              </Route>
+              <PrivateRoute path='/donors'>
+                <Donors />
+              </PrivateRoute>
+              <Route path='/sign-in'>
+                <SignIn />
+              </Route>
+              <PrivateRoute path='/search'>
+                {/* <Search searchedDonorInfo={searchedDonorInfo} setSearchedDonorInfo={setSearchedDonorInfo} /> */}
+                <Search />
+              </PrivateRoute>
+              <Route path='/about-us'>
+                <AboutUs />
+              </Route>
+              <PrivateRoute path='/registration'>
+                <BeDonor />
+              </PrivateRoute>
+              <Route exact path='/'>
+                <Home />
+              </Route>
+              <Route path='*'>
+                <PageNotFound />
+              </Route>
+            </Switch>
+          </Router>
+        </div>
+      </DonorContext.Provider>
+    </UserContext.Provider >
   );
 }
 
