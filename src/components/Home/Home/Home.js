@@ -10,12 +10,10 @@ const Home = (props) => {
     const { searchedDonorInfo, setSearchedDonorInfo } = props;
     return (
         <div className={styles.all_component}>
-            {/* <div> */}
             <Header />
             <SearchDonor searchedDonorInfo={searchedDonorInfo} setSearchedDonorInfo={setSearchedDonorInfo} />
             <LifeSaveBanner />
             <Footer />
-            {/* </div> */}
         </div>
     );
 };

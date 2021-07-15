@@ -24,6 +24,8 @@ const SignIn = () => {
         error: '',
         success: false
     });
+
+    console.log(user);
     const googleProvider = new firebase.auth.GoogleAuthProvider();
 
     const [loggedInUser, setLoggedInUser] = useContext(UserContext);
@@ -45,8 +47,8 @@ const SignIn = () => {
                 }
                 // console.log(result.user);
                 setUser(signedInUser);
-                setLoggedInUser(signedInUser);
-                history.replace(from);
+                // setLoggedInUser(signedInUser);
+                // history.replace(from);
             })
             .catch((error) => {
                 const errorMessage = error.message;
@@ -66,13 +68,13 @@ const SignIn = () => {
         <div className={styles.all_component}>
             <Navbar />
 
-            {
+            {/* {
                 user.isSignedIn ?
                     <div className='text-center'>
                         <h3>Welcome {user.name}!!!</h3>
                         <p className='fs-4'>You Signed in Successfully</p>
                     </div>
-                    :
+                    : */}
                     <div className={styles.login_div}>
                         <div className={styles.login_form}>
                             <div>
@@ -97,7 +99,7 @@ const SignIn = () => {
                             </form>
                         </div>
                     </div>
-            }
+            {/* } */}
 
             <Footer />
         </div>
